@@ -38,7 +38,6 @@ router.post("/", async (req, res) => {
 				.status(400)
 				.send({ message: "An Email sent to your account please verify" });
 		}
-		console.log('Hi',token)
 		const token = user.generateAuthToken();
 		console.log('Hi',token)
 		res.status(200).send({ data: token, message: "logged in successfully" });
